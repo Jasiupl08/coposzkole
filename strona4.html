@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firmy na Bielanach</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #E6E6FA 25%, #FFE5B4 100%);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #008080; /* Deep teal */
+      text-shadow: 
+        -1px -1px 0 white,  
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white; /* White outline effect */
+      margin: 20px auto; /* Center the title */
+      display: block; /* Ensure it takes full width */
+    }
+    .logo {
+      display: block; /* Make the image a block element */
+      margin: 0 auto; /* Center the logo */
+      max-width: 200px; /* Adjust the size of the logo */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 10px; /* Add some space below the title */
+    }
+    .category {
+      margin-bottom: 20px;
+    }
+    .category summary {
+      font-size: 1.5em; /* Slightly smaller text */
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #FFA07A; /* Lighter orange */
+      color: white;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .category summary:hover {
+      background-color: #FA8072; /* Salmon */
+    }
+    .dropdown {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .dropdown details {
+      margin-bottom: 5px;
+    }
+    .dropdown summary {
+      list-style: none;
+      padding: 10px;
+      background-color: #20B2AA; /* Light teal */
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.2em; /* Slightly smaller text */
+    }
+    .dropdown summary:hover {
+      background-color: #66CDAA; /* Medium aquamarine */
+    }
+    .dropdown p {
+      padding: 10px;
+      background-color: #F5F5F5; /* Off-white */
+      border: 1px solid #D3D3D3; /* Light gray */
+      border-radius: 5px;
+      margin: 0;
+      font-size: 1em; /* Slightly smaller text */
+    }
+    .subcategory {
+      margin-left: 20px;
+    }
+    .subcategory details summary {
+      background-color: #66CDAA; /* Medium aquamarine */
+      font-size: 1.1em; /* Slightly smaller text */
+    }
+    .subcategory details summary:hover {
+      background-color: #20B2AA; /* Light teal */
+    }
+    .map-container {
+      width: 100%;
+      height: 500px;
+      margin-top: 20px;
+      border: 1px solid #D3D3D3; /* Light gray */
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .lista-firm-heading {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      color: #008080; /* Deep teal */
+      text-shadow: 
+        -1px -1px 0 white,  
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white; /* White outline effect */
+      margin: 40px 0 20px 0; /* Added more margin for spacing */
+      position: relative;
+    }
+    .lista-firm-heading::before,
+    .lista-firm-heading::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 2px;
+      background-color: #008080; /* Deep teal */
+    }
+    .lista-firm-heading::before {
+      left: 0;
+    }
+    .lista-firm-heading::after {
+      right: 0;
+    }
+    .footer-text {
+      text-align: center;
+      font-size: 0.8em;
+      color: #333;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Firmy na Bielanach</h1>
+  <!-- Add your logo here -->
+  <img src="logo.png" alt="Logo" class="logo">
+
+  <!-- Embedded Google Map -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=140YObJSsv1kR_W_O8Ak0Z5ZB_xu79ZA&ehbc=2E312F" width="640" height="480"></iframe>
+  </div>
+
+  <!-- Heading "Lista Firm" with lines -->
+  <div class="lista-firm-heading">Lista Firm</div>
+
+
+  <!-- Przedszkola i szkoły -->
+  <div class="category">
+    <details>
+      <summary>Przedszkola i szkoły</summary>
+      <div class="dropdown">
+        <details>
+          <summary>Społeczne Przedszkole Integracyjne STO</summary>
+          <p>📍 01-912 Warszawa, Wolumen 3</p>
+        </details>
+        <details>
+          <summary>Kraina Czarów SC. Przedszkole niepubliczne. Trafni K.S</summary>
+          <p>📍 01-864 Warszawa, Literacka 19 / 4</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 39 "Pod Topolami"</summary>
+          <p>📍 01-947 Warszawa, Dorycka 1</p>
+        </details>
+        <details>
+          <summary>Radośni Odkrywcy</summary>
+          <p>📍 01-932 Warszawa, Estrady 128a</p>
+        </details>
+        <details>
+          <summary>Dębowy Raj</summary>
+          <p>📍 01-803 Warszawa, Cegłowska 13a</p>
+        </details>
+        <details>
+          <summary>Zielona Ciuchcia</summary>
+          <p>📍 01-684 Warszawa, Klaudyny 32</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 364 "Pod Tęczą"</summary>
+          <p>📍 01-651 Warszawa, Gwiaździsta 27</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 346 "Pod Kasztanem"</summary>
+          <p>📍 01-684 Warszawa, Klaudyny 8</p>
+        </details>
+        <details>
+          <summary>Przedszkole z Oddziałami Integracyjnymi nr 341</summary>
+          <p>📍 Address not provided</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 334 im. Jasia i Małgosi</summary>
+          <p>📍 01-960 Warszawa, Przy Agorze 12</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 307</summary>
+          <p>📍 01-833 Warszawa, Księgarzy 9</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 306</summary>
+          <p>📍 01-957 Warszawa, Szegedyńska 13</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 268</summary>
+          <p>📍 01-962 Warszawa, Przytyk 5a</p>
+        </details>
+        <details>
+          <summary>Przedszkole Nr 97 "Leśna Polanka"</summary>
+          <p>📍 01-810 Warszawa, Twardowska 23</p>
+        </details>
+        <details>
+          <summary>Przedszkole nr 49 "Pluszowy Miś"</summary>
+          <p>📍 01-848 Warszawa, Skalbmierska 12</p>
+        </details>
+        <details>
+          <summary>Szkoła Podstawowa nr 247 im. K. Lisieckiego - Dziadka</summary>
+          <p>📍 01-951 Warszawa, Wrzeciono 9</p>
+        </details>
+        <details>
+          <summary>Szkoła Podstawowa nr 53 im. gen. M. Zaruskiego</summary>
+          <p>📍 01-689 Warszawa, Rudzka 6</p>
+        </details>
+        <details>
+          <summary>Szkoła Podstawowa nr 77 im. W. Zieleńczyk</summary>
+          <p>📍 01-980 Warszawa, Samogłoska 9</p>
+        </details>
+        <details>
+          <summary>Szkoła Podstawowa nr 79 im. Z. Sokołowskiego</summary>
+          <p>📍 01-934 Warszawa, Arkuszowa 202</p>
+        </details>
+        <details>
+          <summary>Szkoła Podstawowa nr 80 im. M. Kownackiej</summary>
+          <p>📍 01-904 Warszawa, Aspekt 48</p>
+        </details>
+        <details>
+          <summary>Społeczna Szkoła Podstawowa Integracyjna STO</summary>
+          <p>📍 01-912 Warszawa, Wolumen 3</p>
+        </details>
+        <details>
+          <summary>Archidiecezjalne Męskie Liceum Ogólnokształcące im. Bł. Ks. R. Archutowskiego</summary>
+          <p>📍 01-815 Warszawa, Dewajtis 3</p>
+        </details>
+        <details>
+          <summary>Liceum Ogólnokształcące nr XLI im. J. Lelewela</summary>
+          <p>📍 01-682 Warszawa, Kiwerska 3</p>
+        </details>
+        <details>
+          <summary>Zespół Szkół nr 55 im. gen. S. Maczka</summary>
+          <p>📍 01-651 Warszawa, Gwiaździsta 35</p>
+        </details>
+        <details>
+          <summary>Zespół Szkół Nr 10 im. Stanisława Staszica</summary>
+          <p>📍 01-833 Warszawa, Perzyńskiego 10</p>
+        </details>
+        <details>
+          <summary>Zespół Szkół Ponadpodstawowych</summary>
+          <p>📍 01-692 Warszawa, Kolektorska 9 / 11</p>
+        </details>
+        <details>
+          <summary>Szkoła Podstawowa Nr 133 im. Stefana Czarnieckiego</summary>
+          <p>📍 01-835 Warszawa, Fontany 3</p>
+        </details>
+        <details>
+          <summary>Akademia Wychowania Fizycznego im. Józefa Piłsudskiego</summary>
+          <p>📍 00-968 Warszawa, Marymoncka 34</p>
+        </details>
+        <details>
+          <summary>Uniwersytet Kardynała Stefana Wyszyńskiego</summary>
+          <p>📍 Warszawa, Dewajtis 5</p>
+        </details>
+        <details>
+          <summary>Zespół Szkół Nr 35 im. Zofii Jaroszewicz "Kasi"</summary>
+          <p>📍 01-831 Warszawa, Żeromskiego 22/28</p>
+        </details>
+        <details>
+          <summary>XXII Liceum Ogólnokształcące z Oddziałami Dwujęzycznymi im. José Martí</summary>
+          <p>📍 01-884 Warszawa, Staffa 111</p>
+        </details>
+        <details>
+          <summary>Przedszkole Integracyjne Fundacji CZAS DZIECIŃSTWA na Piaskach</summary>
+          <p>📍 01-875 Warszawa, Zgrupowania AK "Żmija" 19A</p>
+        </details>
+        <details>
+          <summary>Przedszkole Góra Uczuć</summary>
+          <p>📍 01-695 Warszawa, Chlewińska 18/20</p>
+        </details>
+      </div>
+    </details>
+  </div>
+
+  <!-- Restauracje -->
+  <div class="category">
+    <details>
+      <summary>Restauracje</summary>
+      <div class="dropdown">
+        <details>
+          <summary>Restauracja Pod Podłogą</summary>
+          <p>📍 01-827 Warszawa, Płatnicza 35/37</p>
+        </details>
+        <details>
+          <summary>Restauracja Poker</summary>
+          <p>📍 01-922 Warszawa, Conrada Josepha 11</p>
+        </details>
+        <details>
+          <summary>Bistro Bielany</summary>
+          <p>📍 01-845 Warszawa, ul. Efraima Schroegera 89</p>
+        </details>
+        <details>
+          <summary>Pod Podłogą z Jadłem</summary>
+          <p>📍 01-832 Warszawa, ul. Płatnicza 35/37</p>
+        </details>
+        <details>
+          <summary>Karuzel Bielański</summary>
+          <p>📍 01-863 Warszawa, Jana Kasprowicza 65</p>
+        </details>
+        <details>
+          <summary>Curry House - Bielany</summary>
+          <p>📍 01-822 Warszawa, Stefana Żeromskiego 81</p>
+        </details>
+        <details>
+          <summary>Mia Famiglia</summary>
+          <p>📍 01-909 Warszawa, Sokratesa 9 lok. U15</p>
+        </details>
+        <details>
+          <summary>Mandala Bielany</summary>
+          <p>📍 01-833 Warszawa, Gustawa Daniłowskiego 47</p>
+        </details>
+        <details>
+          <summary>Restauracja Hutnik</summary>
+          <p>📍 01-963 Warszawa, Wrzeciono 41</p>
+        </details>
+        <details>
+          <summary>Stacja Bielany Wine Bar & Shop</summary>
+          <p>📍 01-836 Warszawa, Jana Kasprowicza 63</p>
+        </details>
+        <details>
+          <summary>Restauracja STRUNA</summary>
+          <p>📍 01-842 Warszawa, Al. Reymonta 12</p>
+        </details>
+        <details>
+          <summary>GOLD SUSHI BIELANY</summary>
+          <p>📍 01-991 Warszawa, Heroldów 19 B</p>
+        </details>
+        <details>
+          <summary>LOKAL’S food craft beer</summary>
+          <p>📍 01-909 Warszawa, Sokratesa 13D</p>
+        </details>
+        <details>
+          <summary>Biesiadowo Bielany</summary>
+          <p>📍 01-949 Warszawa, Jana Kasprowicza 119a/U6</p>
+        </details>
+        <details>
+          <summary>Pokątna Bistro</summary>
+          <p>📍 01-961 Warszawa, Wrzeciono 2</p>
+        </details>
+        <details>
+          <summary>Curry Leaf - Conrada</summary>
+          <p>📍 01-922 Warszawa, Josepha Conrada 5</p>
+        </details>
+        <details>
+          <summary>Chata u Kowalskich</summary>
+          <p>📍 01-922 Warszawa, Josepha Conrada 18A</p>
+        </details>
+        <details>
+          <summary>Mizumi Sushi</summary>
+          <p>📍 01-949 Warszawa, Jana Kasprowicza 119E</p>
+        </details>
+        <details>
+          <summary>Waniliowa</summary>
+          <p>📍 01-840 Warszawa, Aleja Władysława Reymonta 15</p>
+        </details>
+        <details>
+          <summary>Chicago's Pizza Bielany, Żoliborz</summary>
+          <p>📍 01-949 Warszawa, Jana Kasprowicza 103A</p>
+        </details>
+        <details>
+          <summary>Grill Killers</summary>
+          <p>📍 01-912 Warszawa, Sándora Petöfiego 3</p>
+        </details>
+        <details>
+          <summary>Pracownia Pierogów Naturalnych - Baza Smaków</summary>
+          <p>📍 01-823 Warszawa, Jana Kasprowicza 103 lok.24</p>
+        </details>
+        <details>
+          <summary>Buenos Nachos</summary>
+          <p>📍 01-716 Warszawa, Władysława Broniewskiego 56A</p>
+        </details>
+        <details>
+          <summary>Sipizza</summary>
+          <p>📍 01-873 Warszawa, Antoniego Magiera 13A</p>
+        </details>
+      </div>
+    </details>
+  </div>
+
+  <div class="category">
+    <details>
+      <summary>Usługi</summary>
+      <div class="dropdown">
+        <!-- Zakłady Pogrzebowe -->
+        <details>
+          <summary>Zakłady Pogrzebowe</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Adieu. Usługi pogrzebowe</summary>
+              <p>📍 01-938 Warszawa, Herbowa 17</p>
+            </details>
+            <details>
+              <summary>Zakład pogrzebowy. Grochala R</summary>
+              <p>📍 01-905 Warszawa, Renesansowa 4</p>
+            </details>
+            <details>
+              <summary>Iredar. Usługi pogrzebowe</summary>
+              <p>📍 01-813 Warszawa, Marymoncka 105</p>
+            </details>
+            <details>
+              <summary>Minos. Zakład pogrzebowy. Krzysztof Jaźwiec</summary>
+              <p>📍 01-912 Warszawa, Wolumen 53</p>
+            </details>
+            <details>
+              <summary>Biuro Usług Pogrzebowych AMENO</summary>
+              <p>📍 01-801 Warszawa, Al. Zjednoczenia 44</p>
+            </details>
+            <details>
+              <summary>ANUBIS. Biuro usług pogrzebowych</summary>
+              <p>📍 01-922 Warszawa, Conrada 7</p>
+            </details>
+            <details>
+              <summary>Miejskie Przedsiębiorstwo Usług Komunalnych Sp. z o.o.</summary>
+              <p>📍 01-938 Warszawa, ul. Wóycickiego 19 paw 2</p>
+            </details>
+            <details>
+              <summary>Dom Pogrzebowy ELIZJUM</summary>
+              <p>📍 01-842 Warszawa</p>
+            </details>
+          </div>
+        </details>
+
+        <!-- Zakłady Optyczne -->
+        <details>
+          <summary>Zakłady Optyczne</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Zakład Optyczny Rafał Gwardys</summary>
+              <p>📍 01-882 Warszawa, Żeromskiego Stefana 33</p>
+            </details>
+            <details>
+              <summary>Wik Optic. Optyk, lekarz okulista</summary>
+              <p>📍 01-684 Warszawa, Klaudyny 26a</p>
+            </details>
+            <details>
+              <summary>Aniołek-Bis. Salon optyczny. Gabinet okulistyczny</summary>
+              <p>📍 01-904 Warszawa, Aspekt 79</p>
+            </details>
+            <details>
+              <summary>Jakubowicz Zbigniew. Salon optyczny</summary>
+              <p>📍 01-802 Warszawa, Marymoncka 63</p>
+            </details>
+            <details>
+              <summary>Morawscy E.W.A. Zakłady optyczne</summary>
+              <p>📍 01-684 Warszawa, Klaudyny 28</p>
+            </details>
+          </div>
+        </details>
+
+        <!-- Pralnie -->
+        <details>
+          <summary>Pralnie</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Pralnia</summary>
+              <p>📍 01-651 Warszawa, Gwiaździsta 21</p>
+            </details>
+            <details>
+              <summary>Pralnia chemiczna, farbiarnia</summary>
+              <p>📍 01-807 Warszawa, Barcicka 1</p>
+            </details>
+            <details>
+              <summary>SUPRA Pralnia chemiczna i wodna</summary>
+              <p>📍 01-926 Warszawa, Nerudy Pabla 1</p>
+            </details>
+          </div>
+        </details>
+
+        <!-- Biżuteria -->
+        <details>
+          <summary>Biżuteria</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Erdzi. Pracownia biżuterii srebrnej i metaloplastyki</summary>
+              <p>📍 01-813 Warszawa, Marymoncka 105</p>
+            </details>
+            <details>
+              <summary>Włodarczyk Mariusz. Zakład jubilerski</summary>
+              <p>📍 01-930 Warszawa, Przy Agorze 24</p>
+            </details>
+          </div>
+        </details>
+
+        <!-- Szewc -->
+        <details>
+          <summary>Szewc</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Muszyński Stanisław. Naprawa obuwia</summary>
+              <p>📍 01-803 Warszawa, Marymoncka 55</p>
+            </details>
+            <details>
+              <summary>Naprawa obuwia</summary>
+              <p>📍 01-651 Warszawa, Gwiaździsta 27</p>
+            </details>
+          </div>
+        </details>
+
+        <!-- Usługi Fotograficzne -->
+        <details>
+          <summary>Usługi Fotograficzne</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Artifekt SC. Foto, ksero. Malczewscy B., M</summary>
+              <p>📍 01-960 Warszawa, Przy Agorze 1a</p>
+            </details>
+          </div>
+        </details>
+      </div>
+    </details>
+  </div>
+
+  <!-- Sklepy -->
+  <div class="category">
+    <details>
+      <summary>Sklepy</summary>
+      <div class="dropdown">
+        <!-- Spożywcze -->
+        <details>
+          <summary>Spożywcze</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Sklep spożywczy</summary>
+              <p>📍 01-912 Warszawa, Wolumen 53 paw. 42</p>
+            </details>
+            <details>
+              <summary>Top Market</summary>
+              <p>📍 01-960 Warszawa, Przy Agorze 1a</p>
+            </details>
+            <details>
+              <summary>Sklep Katalonia.com.pl</summary>
+              <p>📍 01-871 Warszawa, Jana Kasprowicza 64</p>
+            </details>
+            <details>
+              <summary>Klaudiusz. Sklep spożywczy</summary>
+              <p>📍 01-684 Warszawa, Klaudyny 12</p>
+            </details>
+            <details>
+              <summary>Sam Bielański nr. 125</summary>
+              <p>📍 Warszawa, Kasprowicza 45</p>
+            </details>
+            <details>
+              <summary>Radek nr. 8</summary>
+              <p>📍 Warszawa, Żeromskiego 27</p>
+            </details>
+            <details>
+              <summary>Agora nr. 173</summary>
+              <p>📍 Warszawa, Przy Agorze 15</p>
+            </details>
+          </div>
+        </details>
+
+        <!-- Kwiaciarnie -->
+        <details>
+          <summary>Kwiaciarnie</summary>
+          <div class="subcategory">
+            <details>
+              <summary>Aniwa Floks. Kwiaciarnia wysyłkowa</summary>
+              <p>📍 01-813 Warszawa, Marymoncka 105</p>
+            </details>
+            <details>
+              <summary>Kobusz Wojciech. Sprzedaż kwiatów</summary>
+              <p>📍 01-960 Warszawa, Przy Agorze 2</p>
+            </details>
+            <details>
+              <summary>Pęzik Stanisław. Kwiaty, wieńce, znicze</summary>
+              <p>📍 01-940 Warszawa, Opłotek 36</p>
+            </details>
+          </div>
+        </details>
+
+        <!-- Inne -->
+        <details>
+          <summary>Inne</summary>
+          <div class="subcategory">
+            <details>
+              <summary>U Eugenii. Sklep kosmetyczno-chemiczny</summary>
+              <p>📍 01-802 Warszawa, Marymoncka 81</p>
+            </details>
+            <details>
+              <summary>Pracownia Balonowa</summary>
+              <p>📍 01-802 Warszawa, Marymoncka 81/1</p>
+            </details>
+          </div>
+        </details>
+      </div>
+    </details>
+  </div>
+
+  <!-- Budownictwo -->
+<div class="category">
+  <details>
+    <summary>Budownictwo</summary>
+    <div class="dropdown">
+      <details>
+        <summary>Elka. Elektroinstalacje, pomiary, sieci</summary>
+        <p>📍 01-934 Warszawa, Arkuszowa 55</p>
+      </details>
+      <details>
+        <summary>Energolux SC</summary>
+        <p>📍 01-708 Warszawa, Słodowiec 5a / 36</p>
+      </details>
+      <details>
+        <summary>Figlarz Jarosław. Ślusarstwo, konstrukcje</summary>
+        <p>📍 01-869 Warszawa, Marymoncka 10</p>
+      </details>
+      <details>
+        <summary>Nowax. Nowakowski K</summary>
+        <p>📍 01-940 Warszawa, Opłotek 42a</p>
+      </details>
+      <details>
+        <summary>Montaż mebli kuchennych Montex</summary>
+        <p>📍 01-633 Warszawa</p>
+      </details>
+      <details>
+        <summary>Gipa Idee. Iskra P</summary>
+        <p>📍 01-991 Warszawa, Heroldów 10 / 49</p>
+      </details>
+      <details>
+        <summary>Redom. Zakład stolarsko-tapicerski. Skoneczny S., inż.</summary>
+        <p>📍 01-950 Warszawa, Przy Agorze 22</p>
+      </details>
+      <details>
+        <summary>HYDRAMAX</summary>
+        <p>📍 01-829 Warszawa, Al. Zjednoczenia</p>
+      </details>
+      <details>
+        <summary>Abax. Zakład usług remontowo-budowlanych</summary>
+        <p>📍 01-802 Warszawa, Marymoncka 83/87 / 38</p>
+      </details>
+      <details>
+        <summary>Sadkowski Waldemar J. Kompleksowe remonty mieszkań</summary>
+        <p>📍 01-802 Warszawa, Marymoncka 61</p>
+      </details>
+      <details>
+        <summary>Grabex. Usługi remontowo-wykończeniowe, posadzki przemysłowe</summary>
+        <p>📍 01-963 Warszawa, Wrzeciono 28 / 42</p>
+      </details>
+      <details>
+        <summary>Bud-Max. Pamięta M</summary>
+        <p>📍 01-934 Warszawa, Arkuszowa 109b</p>
+      </details>
+      <details>
+        <summary>Jolie Adrenaline</summary>
+        <p>📍 01-631 Warszawa, Potocka 33a/43</p>
+      </details>
+      <details>
+        <summary>Tractel - wciągarki linowe i elektryczne</summary>
+        <p>📍 04-993 Warszawa, Bysławska 82</p>
+      </details>
+      <details>
+        <summary>Kamieniarstwo Lukstone</summary>
+        <p>📍 00-095 Warszawa, pl. Bankowy 2</p>
+      </details>
+      <details>
+        <summary>Sakostal - kraty pomostowe, zgrzewane</summary>
+        <p>📍 91-134 Łódź, ul. Rojna 84a</p>
+      </details>
+    </div>
+  </details>
+</div>
+
+  <!-- Kosmetyka -->
+  <div class="category">
+  <details>
+    <summary>Kosmetyka</summary>
+    <div class="dropdown">
+      <details>
+        <summary>Petrova. Gabinet kosmetyczny</summary>
+        <p>📍 01-905 Warszawa, Renesansowa 11</p>
+      </details>
+      <details>
+        <summary>Pawelec Anita. Studio fryzur</summary>
+        <p>📍 01-950 Warszawa, Wrzeciono 65</p>
+      </details>
+      <details>
+        <summary>Salon z Pasją</summary>
+        <p>📍 01-864 Warszawa, Jana Kochanowskiego 47</p>
+      </details>
+      <details>
+        <summary>Studio Butterfly</summary>
+        <p>📍 01-905 Warszawa, Renesansowa 21a</p>
+      </details>
+      <details>
+        <summary>Strzałkowska Irena. Usługi fryzjersko-kosmetyczne</summary>
+        <p>📍 01-844 Warszawa, Skalbmierska 13</p>
+      </details>
+      <details>
+        <summary>Salon fryzjerski</summary>
+        <p>📍 01-802 Warszawa, Marymoncka 61a</p>
+      </details>
+      <details>
+        <summary>Patrick. Zakład fryzjerski</summary>
+        <p>📍 01-684 Warszawa, Klaudyny 10</p>
+      </details>
+      <details>
+        <summary>Lady. Salon fryzjerski</summary>
+        <p>📍 01-833 Warszawa, Al. Zjednoczenia 13</p>
+      </details>
+      <details>
+        <summary>Esencja Urody</summary>
+        <p>📍 01-938 Warszawa, Wóycickiego Kazimierza 5 / k</p>
+      </details>
+      <details>
+        <summary>Pocheć Ewa. Gabinet kosmetyczny</summary>
+        <p>📍 01-930 Warszawa, Przy Agorze 26</p>
+      </details>
+      <details>
+        <summary>Nefertiti</summary>
+        <p>📍 01-960 Warszawa, Przy Agorze 13</p>
+      </details>
+      <details>
+        <summary>Monika. Gabinet kosmetyczny</summary>
+        <p>📍 01-684 Warszawa, Klaudyny 32</p>
+      </details>
+      <details>
+        <summary>Elite Club. Narkiewicz A</summary>
+        <p>📍 01-991 Warszawa, Heroldów 19a</p>
+      </details>
+      <details>
+        <summary>Dziuba Elżbieta. Studio urody</summary>
+        <p>📍 01-930 Warszawa, Przy Agorze 26</p>
+      </details>
+      <details>
+        <summary>Digiti. Salon kosmetyczno-fryzjerski</summary>
+        <p>📍 01-651 Warszawa, Gwiaździsta 27</p>
+      </details>
+      <details>
+        <summary>Nastula Judo & Fitness Club. Sporty walki, siłownia i aerobik</summary>
+        <p>📍 01-702 Warszawa, Ogólna 9</p>
+      </details>
+      <details>
+        <summary>Medsport-Sportmedica</summary>
+        <p>📍 01-813 Warszawa, Marymoncka 34 / 23</p>
+      </details>
+      <details>
+        <summary>Olimpus. Fitness club. Aerobik, siłownia, masaż</summary>
+        <p>📍 01-813 Warszawa, Marymoncka 34</p>
+      </details>
+      <details>
+        <summary>Gladiator. Klub kulturystyczny. Racławski J</summary>
+        <p>📍 01-829 Warszawa, Zjednoczenia 19</p>
+      </details>
+      <details>
+        <summary>Kulisy Urody</summary>
+        <p>📍 01-819 Warszawa, Żeromskiego Stefana 14</p>
+      </details>
+    </div>
+  </details>
+</div>
+
+  <!-- Motoryzacja -->
+  <div class="category">
+    <details>
+      <summary>Motoryzacja</summary>
+      <div class="dropdown">
+        <details>
+        <summary>MECHANIKA POJAZDOWA Ryszard Rybicki</summary>
+        <p>📍 01-908 Warszawa, Wólczyńska 55</p>
+      </details>
+      <details>
+        <summary>Podobas R., Krzyczkowski Z. Automechanika</summary>
+        <p>📍 01-908 Warszawa, Wólczyńska 55</p>
+      </details>
+      <details>
+        <summary>Sokratesa SC. Automyjnia</summary>
+        <p>📍 01-909 Warszawa, Wergiliusza 1</p>
+      </details>
+      <details>
+        <summary>Chrysler-Jeep. ASO. Naprawy powypadkowe. Majda P., Skaczkowski R</summary>
+        <p>📍 01-991 Warszawa, Heroldów 7a</p>
+      </details>
+      <details>
+        <summary>Moraczewski Józef. Wulkanizacja, sprzedaż opon i dętek</summary>
+        <p>📍 01-633 Warszawa, Gdańska 5</p>
+      </details>
+      <details>
+        <summary>ARIES MOTOR</summary>
+        <p>📍 01-934 Warszawa, Arkuszowa 11</p>
+      </details>
+      <details>
+        <summary>HYUNDAI Jaworski-Gajewski</summary>
+        <p>📍 01-842 Warszawa, Oczapowskiego 15</p>
+      </details>
+      <details>
+        <summary>AUTO Skaczkowski</summary>
+        <p>📍 01-843 Warszawa, Oczapowskiego 3</p>
+      </details>
+      <details>
+        <summary>WWL SKUP AUT</summary>
+        <p>📍 05-220 Warszawa, Lachmana</p>
+      </details>
+      <details>
+        <summary>MaxMotoAutoService</summary>
+        <p>📍 01-969 Warszawa, Pułkowa 37</p>
+      </details>
+    </div>
+  </details>
+</div>
+
+  
+  <!-- Czas Wolny -->
+<div class="category">
+  <details>
+    <summary>Czas Wolny</summary>
+    <div class="dropdown">
+      <details>
+        <summary>Vacansoleil</summary>
+        <p>📍 01-909 Warszawa, Sokratesa 15</p>
+      </details>
+      <details>
+        <summary>Triada SA. Biuro usług turystycznych AMS</summary>
+        <p>📍 01-802 Warszawa, Marymoncka 53</p>
+      </details>
+      <details>
+        <summary>Circuit. Doradztwo turystyczne. Szostek-Jerke B</summary>
+        <p>📍 01-703 Warszawa, Gąbińska 18 / 15</p>
+      </details>
+      <details>
+        <summary>Aeroklub Warszawski. Szkolenia</summary>
+        <p>📍 01-934 Warszawa, Księżycowa 1</p>
+      </details>
+      <details>
+        <summary>Bielański Klub Kyokushin Karate</summary>
+        <p>📍 01-813 Warszawa, Marymoncka 34</p>
+      </details>
+      <details>
+        <summary>Integracyjny Klub Sportowy</summary>
+        <p>📍 01-813 Warszawa, Marymoncka 34</p>
+      </details>
+      <details>
+        <summary>Klub sportowy AZS-AWF</summary>
+        <p>📍 01-813 Warszawa, Marymoncka 34</p>
+      </details>
+      <details>
+        <summary>Związkowy Klub Strzelecki</summary>
+        <p>📍 01-977 Warszawa, Marymoncka 42</p>
+      </details>
+      <details>
+        <summary>Klub Hutnik - Warszawa</summary>
+        <p>📍 01-977 Warszawa, Marymoncka 42</p>
+      </details>
+    </div>
+  </details>
+</div>
+
+  <!-- Doradztwo -->
+  <div class="category">
+    <details>
+      <summary>Doradztwo</summary>
+      <div class="dropdown">
+        <details>
+        <summary>Eurobau. Biuro rachunkowe</summary>
+        <p>📍 01-684 Warszawa, Klaudyny 36 / 4</p>
+      </details>
+      <details>
+        <summary>Wyciechowska Aleksandra. Biuro rachunkowe</summary>
+        <p>📍 01-960 Warszawa, Przy Agorze 8 / 61</p>
+      </details>
+      <details>
+        <summary>Prymat. Biuro księgowe</summary>
+        <p>📍 01-651 Warszawa, Gwiaździsta 21 / 1</p>
+      </details>
+      <details>
+        <summary>Markowska Marianna. Usługi rachunkowo-księgowe</summary>
+        <p>📍 01-946 Warszawa, Marymoncka 129 / 4</p>
+      </details>
+      <details>
+        <summary>Diamax. Biuro rachunkowe</summary>
+        <p>📍 01-821 Warszawa, Hajoty 59</p>
+      </details>
+      <details>
+        <summary>Krupa. Pośrednictwo w obrocie nieruchomościami</summary>
+        <p>📍 01-828 Warszawa, Schroegera Efraima 75 / 79</p>
+      </details>
+      <details>
+        <summary>Malecha Stanisław. Kancelaria adwokacka</summary>
+        <p>📍 01-684 Warszawa, Klaudyny 18 / 113</p>
+      </details>
+      <details>
+        <summary>Adwokat Łukasz Jaszecki Kancelaria Adwokacka</summary>
+        <p>📍 01-651 Warszawa, Gwiaździsta 5b / 23</p>
+      </details>
+      <details>
+        <summary>Jusiel Szymon A. Kancelaria adwokacka</summary>
+        <p>📍 01-964 Warszawa, Dorycka 6 / 93</p>
+      </details>
+      <details>
+        <summary>Kancelaria Radcy Prawnego PRELEX Katarzyna Pawlonka-Jurczyk</summary>
+        <p>📍 01-813 Warszawa, Marymoncka 105 / 13</p>
+      </details>
+      <details>
+        <summary>LORICA IURIS Kancelaria Adwokatów i Radców Prawnych</summary>
+        <p>📍 01-681 Warszawa, Raduńska 4a</p>
+      </details>
+      <details>
+        <summary>MPG Media Sp. z o.o.</summary>
+        <p>📍 02-761 Warszawa, Cypryjska 2G</p>
+      </details>
+      <details>
+        <summary>Tax Expert 24</summary>
+        <p>📍 03-186 Warszawa, ul. Modlińska 129</p>
+      </details>
+      <details>
+        <summary>Biuro rachunkowe Saldo Plus</summary>
+        <p>📍 02-022 Warszawa, Niemcewicza 7/9 lok. 19</p>
+      </details>
+    </div>
+  </details>
+</div>
+
+  </body>
+</html>
